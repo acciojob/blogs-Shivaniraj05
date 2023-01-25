@@ -13,7 +13,7 @@ public class Image {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String description;
-    private String dimension;
+    private String dimensions;
 
 
     @ManyToOne

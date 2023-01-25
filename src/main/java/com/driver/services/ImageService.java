@@ -20,7 +20,7 @@ public class ImageService {
     public Image createAndReturn(Blog blog, String description, String dimensions){
         //create an image based on given parameters and add it to the imageList of given blog
         Image image = new Image();
-        image.setDimension(dimensions);
+        image.setDimensions(dimensions);
         image.setDescription(description);
         image.setBlog(blog);
 
@@ -57,7 +57,7 @@ public class ImageService {
         //Find the number of images of given dimensions that can fit in a screen having `screenDimensions`
         //In case the image is null, return 0
         if(screenDimensions.split("X").length==2 || Objects.nonNull(image)) {
-            String[] imageDimensions = image.getDimension().split("X");
+            String[] imageDimensions = image.getDimensions().split("X");
 
             int imageWidth = Integer.parseInt(imageDimensions[0]);
             int imageHeight = Integer.parseInt(imageDimensions[1]);
